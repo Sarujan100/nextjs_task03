@@ -1,0 +1,394 @@
+{
+  "header": {
+    "navLinks": [
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "About Us",
+        "href": "#about"
+      },
+      {
+        "label": "Products",
+        "href": "#projects"
+      },
+      {
+        "label": "Services",
+        "href": "#services"
+      },
+      {
+        "label": "Popular Area",
+        "href": "#insights"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "logo": {
+      "icon": "/IMAGE 2023-12-11 20_49_40 5.png",
+      "text": "/IMAGE 2023-12-11 20_49_40 4.png"
+    }
+  },
+  "hero": {
+    "title": "Masters of\nConsistency and\nQuality.",
+    "highlight": "Quality.",
+    "stats": [
+      {
+        "value": "500k+",
+        "label": "Users use this app"
+      },
+      {
+        "value": "20k+",
+        "label": "Users review this app"
+      }
+    ],
+    "searchOptions": [
+      {
+        "label": "Buy",
+        "value": "Rent"
+      },
+      {
+        "label": "Property Type",
+        "value": "Apartment"
+      },
+      {
+        "label": "Price",
+        "value": "&2000 - &4000"
+      }
+    ],
+    "mainImage": "/pngegg.png"
+  },
+  "philosophy": {
+    "title": "Latest offplan projects in Dubai",
+    "description": "Whether you're selling, renting, buying, or seeking property valuation services, we are here to assist you every step of the way. Contact us today for exceptional real estate solutions.",
+    "items": [
+      {
+        "icon": "/feather_activity.svg",
+        "title": "OUR PHILOSHOPY",
+        "description": "Our vision is to offer exclusive after-sales client services which helps our company to create well-established client network in our key markets."
+      },
+      {
+        "icon": "/feather_trending-up.svg",
+        "title": "OUR VISION & MISSION",
+        "description": "Our vision is to offer exclusive after-sales client services which helps our company to create well-established client network in our key markets."
+      },
+      {
+        "icon": "/feather_command.svg",
+        "title": "OUR EXPERTISE",
+        "description": "What truly differentiates us from the competition is our commitment to providing premium and comprehensive after-sales client services."
+      },
+      {
+        "icon": "/feather_navigation.svg",
+        "title": "PROPERTY ONSULTANT",
+        "description": "Buyown House Properties is currently seeking talented individuals to join our thriving team as Property Consultants."
+      }
+    ],
+    "stats": [
+      {
+        "label": "PRODUCT",
+        "value": "10,0000+"
+      },
+      {
+        "label": "LIKES",
+        "value": "45600"
+      },
+      {
+        "label": "SALE",
+        "value": "576864"
+      },
+      {
+        "label": "CUSTOMERS",
+        "value": "947444"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Latest offplan projects in Dubai",
+    "items": [
+      {
+        "id": 1,
+        "title": "2-Bedroom | Vacant | City View | Chiller on DEWA",
+        "location": "Atlantis The Royal Residences, Dubai",
+        "price": "$4,200,000",
+        "content": "BuyOwn House Properties is delighted to present this large 7-bedroom villa plus",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "area": 2,
+        "image": "/Rectangle 27.png"
+      },
+      {
+        "id": 2,
+        "title": "2-Bedroom | Vacant | City View | Chiller on DEWA",
+        "location": "Atlantis The Royal Residences, Dubai",
+        "price": "$4,200,000",
+        "content": "BuyOwn House Properties is delighted to present this large 7-bedroom villa plus",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "area": 2,
+        "image": "/Rectangle 27-2.png"
+      },
+      {
+        "id": 3,
+        "title": "2-Bedroom | Vacant | City View | Chiller on DEWA",
+        "location": "Atlantis The Royal Residences, Dubai",
+        "price": "$4,200,000",
+        "content": "BuyOwn House Properties is delighted to present this large 7-bedroom villa plus",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "area": 2,
+        "image": "/Rectangle 27-3.png"
+      },
+      {
+        "id": 4,
+        "title": "2-Bedroom | Vacant | City View | Chiller on DEWA",
+        "location": "Atlantis The Royal Residences, Dubai",
+        "price": "$4,200,000",
+        "content": "BuyOwn House Properties is delighted to present this large 7-bedroom villa plus",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "area": 2,
+        "image": "/Rectangle 01.png"
+      },
+      {
+        "id": 5,
+        "title": "2-Bedroom | Vacant | City View | Chiller on DEWA",
+        "location": "Atlantis The Royal Residences, Dubai",
+        "price": "$4,200,000",
+        "content": "BuyOwn House Properties is delighted to present this large 7-bedroom villa plus",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "area": 2,
+        "image": "/Rectangle 02.png"
+      },
+      {
+        "id": 6,
+        "title": "2-Bedroom | Vacant | City View | Chiller on DEWA",
+        "location": "Atlantis The Royal Residences, Dubai",
+        "price": "$4,200,000",
+        "content": "BuyOwn House Properties is delighted to present this large 7-bedroom villa plus",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "area": 2,
+        "image": "/Rectangle 03.png"
+      }
+    ]
+  },
+  "trustedCompanies": {
+    "title": "TRUSTED BY OVER 1K+ COMPANIES",
+    "items": [
+      {
+        "id": 1,
+        "name": "Company 1",
+        "logo": "/Group.svg"
+      },
+      {
+        "id": 2,
+        "name": "Company 2",
+        "logo": "/Group-2.svg"
+      },
+      {
+        "id": 3,
+        "name": "Company 3",
+        "logo": "/Group-3.svg"
+      },
+      {
+        "id": 4,
+        "name": "Company 4",
+        "logo": "/Group-4.svg"
+      },
+      {
+        "id": 5,
+        "name": "Company 5",
+        "logo": "/Group-5.svg"
+      },
+      {
+        "id": 6,
+        "name": "Company 6",
+        "logo": "/Group-6.svg"
+      },
+      {
+        "id": 7,
+        "name": "Company 7",
+        "logo": "/Group-7.svg"
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "50+ Beautiful rooms inspiration",
+    "description": "Our designer already made a lot of beautiful prototipe of rooms that inspire you",
+    "items": [
+      {
+        "id": 1,
+        "title": "Purchasing real estate in UAE",
+        "description": "2032 –– from 250 000$",
+        "image": "/Image.png"
+      },
+      {
+        "id": 2,
+        "title": "Purchasing real estate in UAE",
+        "description": "2032 –– from 250 000$",
+        "image": "/Rectangle 25.png"
+      },
+      {
+        "id": 3,
+        "title": "Purchasing real estate in UAE",
+        "description": "2032 –– from 250 000$",
+        "image": "/Image.png"
+      },
+      {
+        "id": 4,
+        "title": "Purchasing real estate in UAE",
+        "description": "2032 –– from 250 000$",
+        "image": "/Rectangle 25.png"
+      }
+    ]
+  },
+  "cta": {
+    "title": "What our happy client say",
+    "description": "Several selected clients, who already believe in our service.",
+    "philosophies": [
+      {
+        "title": "Where does it come from?",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "title": "Create experiences?",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      },
+      {
+        "title": "Where does it come from?",
+        "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+      },
+      {
+        "title": "Where can I get some?",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour."
+      }
+    ],
+    "banner": {
+      "title": "We will solve these problems for you. 😍",
+      "description": "Join with more 1200+ happy customers",
+      "avatars": [
+        "/Item-5.svg",
+        "/Item-4.svg",
+        "/Item-3.svg",
+        "/Item-2.svg",
+        "/Item.svg"
+      ],
+      "buttonText": "Registration"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked “questions”",
+    "subtitle": "You asked, we answered! ✋",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo lorem Ipsum is simply dummy text of the printing and typesetting.",
+    "items": [
+      {
+        "question": "What features come with Designer Search?",
+        "answer": "With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions."
+      },
+      {
+        "question": "What features come with the Job Board?",
+        "answer": "With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions."
+      },
+      {
+        "question": "How many jobs can I post with the Job Board?",
+        "answer": "With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions."
+      },
+      {
+        "question": "What comes with the Job Board and Designer Search bundle?",
+        "answer": "With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions."
+      },
+      {
+        "question": "Is this a monthly subscription?",
+        "answer": "With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions."
+      },
+      {
+        "question": "How do I make a purchase?",
+        "answer": "With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions."
+      }
+    ]
+  },
+  "footer": {
+    "logo": "/Frame 11.png",
+    "reachUs": {
+      "title": "Reach us",
+      "phone": "+1012 3456 789",
+      "email": "demo@gmail.com",
+      "address": "132 Dartmouth Street Boston, Massachusetts 02156 United States"
+    },
+    "sections": [
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Contact",
+            "href": "#"
+          },
+          {
+            "label": "Blogs",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "label": "Privacy Policy",
+            "href": "#"
+          },
+          {
+            "label": "Terms & Services",
+            "href": "#"
+          },
+          {
+            "label": "Terms of Use",
+            "href": "#"
+          },
+          {
+            "label": "Refund Policy",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Quick Links",
+        "links": [
+          {
+            "label": "Techlabz Keybox",
+            "href": "#"
+          },
+          {
+            "label": "Downloads",
+            "href": "#"
+          },
+          {
+            "label": "Forum",
+            "href": "#"
+          }
+        ]
+      }
+    ],
+    "mapImage": "/Rectangle.png"
+  },
+  "testimonials": {
+    "title": "What our happy",
+    "highlight": "client say",
+    "description": "Several selected clients, who already believe in our service.",
+    "items": [
+      {
+        "id": 1,
+        "name": "Matthew Paul",
+        "content": "Perfect, very good job! Thank you for the amazing design and work. Really impressed with the high quality and quick turnaround time. Highly recommend.",
+        "image": "/Frame 6839 1.png",
+        "clusterImage": "/Frame 71.png"
+      }
+    ]
+  }
+}

@@ -4,7 +4,20 @@ import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 
-export function InspirationCarouselSection() {
+interface InspirationItem {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
+
+interface InspirationProps {
+  title: string;
+  description: string;
+  items: InspirationItem[];
+}
+
+export function InspirationCarouselSection({ title, description, items }: InspirationProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'start',
@@ -12,34 +25,6 @@ export function InspirationCarouselSection() {
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-
-  const inspirations = [
-
-    {
-      id: 1,
-      title: 'Purchasing real estate in UAE',
-      description: '2032 –– from 250 000$',
-      image: '/Image.png',
-    },
-    {
-      id: 2,
-      title: 'Purchasing real estate in UAE',
-      description: '2032 –– from 250 000$',
-      image: '/Rectangle 25.png',
-    },
-    {
-      id: 3,
-      title: 'Purchasing real estate in UAE',
-      description: '2032 –– from 250 000$',
-      image: '/Image.png',
-    },
-    {
-      id: 4,
-      title: 'Purchasing real estate in UAE',
-      description: '2032 –– from 250 000$',
-      image: '/Rectangle 25.png',
-    },
-  ];
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -74,10 +59,10 @@ export function InspirationCarouselSection() {
           {/* Left Content */}
           <div className="w-full lg:w-1/3 flex flex-col items-start">
             <h2 className="text-[48px] font-bold text-light-green-500 font-lexend leading-[-0.8px] mb-2.5">
-              50+ Beautiful rooms inspiration
+              {title}
             </h2>
             <p className="text-inspiration-desc mb-8 max-w-md">
-              Our designer already made a lot of beautiful prototipe of rooms that inspire you
+              {description}
             </p>
 
             {/* Navigation Arrows */}
@@ -121,7 +106,7 @@ export function InspirationCarouselSection() {
           <div className="w-full lg:w-2/3 relative">
             <div className="overflow-visible lg:overflow-hidden" ref={emblaRef}>
               <div className="flex gap-7 items-start">
-                {inspirations.map((item, index) => (
+                {items.map((item, index) => (
                   <div
                     key={item.id}
                     className={`relative cursor-pointer transition-all duration-500 ${index === selectedIndex

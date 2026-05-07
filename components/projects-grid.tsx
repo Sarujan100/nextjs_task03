@@ -4,80 +4,42 @@ import Image from 'next/image';
 import { MapPin, Heart, Share2, Bath, Bed, Ruler } from 'lucide-react';
 import { useState } from 'react';
 
-export function ProjectsGridSection() {
-  const [liked, setLiked] = useState<Record<number, boolean>>({});
+interface ProjectItem {
+  id: number;
+  title: string;
+  location: string;
+  price: string;
+  content: string;
+  bedrooms: number;
+  bathrooms: number;
+  area: number;
+  image: string;
+}
 
-  const projects = [
-    {
-      id: 1,
-      title: '2-Bedroom | Vacant | City View | Chiller on DEWA',
-      location: 'Atlantis The Royal Residences, Dubai',
-      price: '$4,200,000',
-      content: 'BuyOwn House Properties is delighted to present this large 7-bedroom villa plus',
-      bedrooms: 2,
-      bathrooms: 2,
-      area: 2,
-      image: '/Rectangle 27.png',
-    },
-    {
-      id: 2,
-      title: '2-Bedroom | Vacant | City View | Chiller on DEWA',
-      location: 'Atlantis The Royal Residences, Dubai',
-      price: '$4,200,000',
-      content: 'BuyOwn House Properties is delighted to present this large 7-bedroom villa plus',
-      bedrooms: 2,
-      bathrooms: 2,
-      area: 2,
-      image: '/Rectangle 27-2.png',
-    },
-    {
-      id: 3,
-      title: '2-Bedroom | Vacant | City View | Chiller on DEWA',
-      location: 'Atlantis The Royal Residences, Dubai',
-      price: '$4,200,000',
-      content: 'BuyOwn House Properties is delighted to present this large 7-bedroom villa plus',
-      bedrooms: 2,
-      bathrooms: 2,
-      area: 2,
-      image: '/Rectangle 27-3.png',
-    },
-    {
-      id: 4,
-      title: '2-Bedroom | Vacant | City View | Chiller on DEWA',
-      location: 'Atlantis The Royal Residences, Dubai',
-      price: '$4,200,000',
-      content: 'BuyOwn House Properties is delighted to present this large 7-bedroom villa plus',
-      bedrooms: 2,
-      bathrooms: 2,
-      area: 2,
-      image: '/Rectangle 01.png',
-    },
-    {
-      id: 5,
-      title: '2-Bedroom | Vacant | City View | Chiller on DEWA',
-      location: 'Atlantis The Royal Residences, Dubai',
-      price: '$4,200,000',
-      content: 'BuyOwn House Properties is delighted to present this large 7-bedroom villa plus',
-      bedrooms: 2,
-      bathrooms: 2,
-      area: 2,
-      image: '/Rectangle 02.png',
-    },
-    {
-      id: 6,
-      title: '2-Bedroom | Vacant | City View | Chiller on DEWA',
-      location: 'Atlantis The Royal Residences, Dubai',
-      price: '$4,200,000',
-      content: 'BuyOwn House Properties is delighted to present this large 7-bedroom villa plus',
-      bedrooms: 2,
-      bathrooms: 2,
-      area: 2,
-      image: '/Rectangle 03.png',
-    },
-  ];
+interface ProjectsProps {
+  title: string;
+  items: ProjectItem[];
+}
+
+export function ProjectsGridSection({ title, items }: ProjectsProps) {
+  const [liked, setLiked] = useState<Record<number, boolean>>({});
 
   const toggleLike = (id: number) => {
     setLiked((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const renderTitle = () => {
+    const parts = title.split('Dubai');
+    if (parts.length > 1) {
+      return (
+        <>
+          {parts[0]}
+          <span className="text-primary-500">Dubai</span>
+          {parts[1]}
+        </>
+      );
+    }
+    return title;
   };
 
   return (
@@ -86,14 +48,14 @@ export function ProjectsGridSection() {
         {/* Section Title */}
         <div className="text-center pb-6">
           <h2 className="text-[30px] leading-normal tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
-            Latest offplan projects in <span className="text-primary-500">Dubai</span>
+            {renderTitle()}
           </h2>
         </div>
 
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
-          {projects.map((project) => (
+          {items.map((project) => (
             <div key={project.id} className="project-card bg-white overflow-hidden shadow-sm hover:shadow-lg transition">
               {/* Image Container */}
               <div className="relative h-48 sm:h-56 md:h-64 bg-gray-300 flex items-center justify-center overflow-hidden group">

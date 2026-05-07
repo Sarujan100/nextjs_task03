@@ -4,16 +4,22 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
-const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Products', href: '#projects' },
-  { label: 'Services', href: '#services' },
-  { label: 'Popular Area', href: '#insights' },
-  { label: 'Contact', href: '#contact' },
-];
+interface NavLink {
+  label: string;
+  href: string;
+}
 
-export function Header() {
+interface Logo {
+  icon: string;
+  text: string;
+}
+
+interface HeaderProps {
+  navLinks: NavLink[];
+  logo: Logo;
+}
+
+export function Header({ navLinks, logo }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('Home');
 
@@ -27,10 +33,10 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <div className="flex items-center justify-center bg-white">
-              <img src="/IMAGE 2023-12-11 20_49_40 5.png" alt="logo" className="h-12 w-11.25 md:h-auto md:w-auto" />
+              <img src={logo.icon} alt="logo" className="h-12 w-11.25 md:h-auto md:w-auto" />
             </div>
             <div className="flex flex-col leading-tight">
-              <img src="/IMAGE 2023-12-11 20_49_40 4.png" alt="logo" className="h-8 w-20.25 sm:h-auto sm:w-auto" />
+              <img src={logo.text} alt="logo" className="h-8 w-20.25 sm:h-auto sm:w-auto" />
             </div>
           </Link>
 

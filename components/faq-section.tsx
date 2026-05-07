@@ -3,35 +3,20 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-export function FAQSection() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
-  const faqs = [
-    {
-      question: 'What features come with Designer Search?',
-      answer: 'With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions.',
-    },
-    {
-      question: 'What features come with the Job Board?',
-      answer: 'With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions.',
-    },
-    {
-      question: 'How many jobs can I post with the Job Board?',
-      answer: 'With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions.',
-    },
-    {
-      question: 'What comes with the Job Board and Designer Search bundle?',
-      answer: 'With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions.',
-    },
-    {
-      question: 'Is this a monthly subscription?',
-      answer: 'With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions.',
-    },
-    {
-      question: 'How do I make a purchase?',
-      answer: 'With the Job Board you have access to one job posting and you can easily swap out listings as many times as you need to. If you’d like to have multiple postings up at the same time, you are able to purchase multiple Job Board subscriptions.',
-    },
-  ];
+interface FAQProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  items: FAQItem[];
+}
+
+export function FAQSection({ title, subtitle, description, items }: FAQProps) {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   const toggleAccordion = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -43,19 +28,19 @@ export function FAQSection() {
         {/* Section Title */}
         <div className="text-center">
           <h2 className="text-[30px] leading-normal tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
-            Frequently asked <span className="text-primary-500">“questions”</span>
+            {title.split('“questions”')[0]} <span className="text-primary-500">“questions”</span>
           </h2>
         </div>
 
 
         <div className="flex flex-col gap-2">
-          <h2 className="text-[24px] leading-normal self-stretch font-lexend font-medium text-dark-green">You asked, we answered! ✋ </h2 >
-          <p className="faq-question">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+          <h2 className="text-[24px] leading-normal self-stretch font-lexend font-medium text-dark-green">{subtitle}</h2 >
+          <p className="faq-question">{description}</p>
         </div>
 
         {/* FAQ Accordion */}
         <div className="">
-          {faqs.map((faq, index) => (
+          {items.map((faq, index) => (
             <div
               key={index}
               className=""

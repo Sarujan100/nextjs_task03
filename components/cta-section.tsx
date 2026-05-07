@@ -3,36 +3,36 @@
 import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
 
-export function CTASection() {
-  const philosophies = [
-    {
+interface PhilosophyCard {
+  title: string;
+  description: string;
+}
 
-      title: 'Where does it come from?',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    },
-    {
-      title: 'Create experiences?',
-      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    },
-    {
-      title: 'Where does it come from?',
-      description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
-    },
-    {
-      title: 'Where can I get some?',
-      description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.',
-    },
-  ];
+interface BannerData {
+  title: string;
+  description: string;
+  avatars: string[];
+  buttonText: string;
+}
+
+interface CTAProps {
+  title: string;
+  description: string;
+  philosophies: PhilosophyCard[];
+  banner: BannerData;
+}
+
+export function CTASection({ title, description, philosophies, banner }: CTAProps) {
   return (
     <section className="pb-18">
       <div className="flex flex-col gap-8 mx-auto">
         {/* Section Title */}
         <div className="text-center">
           <h2 className="text-[30px] leading-normal tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
-            What our happy <span className="text-primary-500">client say</span>
+            {title.split('client say')[0]} <span className="text-primary-500">client say</span>
           </h2>
           <p className="text-[14px] leading-[26px] self-stretch font-lexend font-normal text-light-green-500">
-            Several selected clients, who already believe in our service.
+            {description}
           </p>
         </div>
 
@@ -88,20 +88,18 @@ export function CTASection() {
             {/* Left Content */}
             <div className="flex flex-col items-start gap-4">
               <h3 className="text-[30px] text-white font-bold leading-normal tracking-[-0.8px] font-lexend">
-                We will solve these <br /> problems for you. 😍
+                {banner.title.split(' 😍')[0]} 😍
               </h3>
               <p className="text-white text-[16px] leading-[26px] font-lexend font-normal">
-                Join with more 1200+ happy customers
+                {banner.description}
               </p>
 
               {/* Avatars and Others */}
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-3">
-                  <img src="/Item-5.svg" alt="User" className="" />
-                  <img src="/Item-4.svg" alt="User" className="" />
-                  <img src="/Item-3.svg" alt="User" className="" />
-                  <img src="/Item-2.svg" alt="User" className="" />
-                  <img src="/Item.svg" alt="User" className="" />
+                  {banner.avatars.map((avatar, i) => (
+                    <img key={i} src={avatar} alt="User" className="" />
+                  ))}
                 </div>
                 <span className="text-white text-[16px] leading-[26px] font-lexend font-normal">and others</span>
               </div>
@@ -110,7 +108,7 @@ export function CTASection() {
             {/* Right Content (Registration Button) */}
             <div className="flex justify-center md:justify-end md:pr-12">
               <button className="glass-panel px-12 py-4 text-white font-lexend font-semibold text-[16px] hover:bg-white/20 transition cursor-pointer">
-                Registration
+                {banner.buttonText}
               </button>
             </div>
           </div>
