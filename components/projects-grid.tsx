@@ -44,7 +44,7 @@ export function ProjectsGridSection({ title, items }: ProjectsProps) {
 
   return (
     <section className="">
-      <div className="mx-auto pb-18">
+      <div className="mx-auto pb-18 sm:pb-14 lg:pb-18">
         {/* Section Title */}
         <div className="text-center pb-6">
           <h2 className="text-[30px] leading-normal tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
@@ -54,7 +54,7 @@ export function ProjectsGridSection({ title, items }: ProjectsProps) {
 
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
           {items.map((project) => (
             <div key={project.id} className="project-card bg-white overflow-hidden shadow-sm hover:shadow-lg transition">
               {/* Image Container */}
@@ -69,12 +69,12 @@ export function ProjectsGridSection({ title, items }: ProjectsProps) {
 
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1 flex flex-col gap-3">
-                    <h3 className="text-[16px] leading-normal self-stretch font-lexend font-semibold text-dark-green">{project.title}</h3>
+                    <h3 className="text-[14px] lg:text-[16px] leading-normal self-stretch font-lexend font-semibold text-dark-green">{project.title}</h3>
                     {/* Price */}
-                    <p className="text-[16px] leading-[26px] self-stretch font-lexend font-normal text-dark-green">{project.price}</p>
-                    <div className="flex items-center text-dark-green text-[16px] font-lexend font-normal gap-3 overflow-hidden text-ellipsis whitespace-nowrap">
-                      <img src="/location.svg" alt="location" className="" />
-                      {project.location}
+                    <p className="text-[14px] lg:text-[16px] leading-[26px] self-stretch font-lexend font-normal text-dark-green">{project.price}</p>
+                    <div className="flex items-center text-dark-green text-[16px] sm:text-[14px] lg:text-[16px] font-lexend font-normal gap-2 lg:gap-3 w-full overflow-hidden">
+                      <img src="/location.svg" alt="location" className="shrink-0" />
+                      <span className="truncate">{project.location}</span>
                     </div>
                     <div className="text-[16px] leading-[26px] self-stretch font-lexend font-normal text-dark-green-100">
                       {project.content}
@@ -84,7 +84,7 @@ export function ProjectsGridSection({ title, items }: ProjectsProps) {
 
                 {/* Footer */}
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-5 text-[#0E2824] text-[16px] font-lexend font-medium">
+                  <div className="flex items-center gap-3 lg:gap-5 text-[#0E2824] text-[14px] lg:text-[16px] font-lexend font-medium">
                     <div className="flex items-center gap-2">
                       <img src="/bathtub.png" alt="bathrooms" className="object-contain" />
                       <span>{project.bathrooms}</span>

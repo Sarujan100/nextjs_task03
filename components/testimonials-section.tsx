@@ -19,7 +19,7 @@ export function TestimonialsSection({ title, highlight, description, items }: Te
   const currentItem = items[0]; // Currently showing the first item as in the original code
 
   return (
-    <section className="py-18">
+    <section className="py-18 sm:py-14 lg:py-18">
       <div className="mx-auto flex flex-col gap-12">
         {/* Section Title */}
         <div className="text-center gap-2 flex flex-col">
@@ -33,7 +33,7 @@ export function TestimonialsSection({ title, highlight, description, items }: Te
 
         {/* Happy Clients - Matthew Paul Feature */}
         <div className="mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 items-center">
             {/* Left - Main Image */}
             <div className="relative flex justify-center lg:justify-start">
               <div className="">
@@ -46,7 +46,7 @@ export function TestimonialsSection({ title, highlight, description, items }: Te
             </div>
 
             {/* Middle - Testimonial Text */}
-            <div className="flex flex-col justify-start items-start">
+            <div className="flex flex-col justify-start items-start sm:justify-center sm:items-center sm:text-center lg:justify-start lg:items-start lg:text-start">
               <h3 className="text-[30px] leading-[-0.8px] font-lexend font-bold text-light-green-500 mb-5">
                 {currentItem.name}
               </h3>
@@ -65,8 +65,8 @@ export function TestimonialsSection({ title, highlight, description, items }: Te
             </div>
 
             {/* Right - Avatar Cluster */}
-            <div className="flex items-center justify-center">
-              <img src={currentItem.clusterImage} alt="" className="w-[397px] h-[355px] object-cover overflow-visible!" />
+            <div className="flex items-center justify-center lg:col-span-2 xl:col-span-1">
+              <img src={currentItem.clusterImage} alt="" className="w-[397px] h-[355px] object-cover" />
             </div>
           </div>
         </div>

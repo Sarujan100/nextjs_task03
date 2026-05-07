@@ -53,11 +53,11 @@ export function InspirationCarouselSection({ title, description, items }: Inspir
   }, [selectedIndex, emblaApi]);
 
   return (
-    <section className="py-18 bg-white overflow-hidden">
+    <section className="py-18 sm:py-14 lg:py-18 bg-white overflow-hidden">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-6">
+        <div className="flex flex-col lg:flex-row items-center  gap-6">
           {/* Left Content */}
-          <div className="w-full lg:w-1/3 flex flex-col items-start">
+          <div className="w-full lg:w-1/3 flex flex-col items-start sm:text-center sm:items-center lg:items-start lg:sm:text-start">
             <h2 className="text-[48px] font-bold text-light-green-500 font-lexend leading-[-0.8px] mb-2.5">
               {title}
             </h2>
@@ -84,7 +84,7 @@ export function InspirationCarouselSection({ title, description, items }: Inspir
             </div>
 
             {/* Dots Indicators (Mobile) */}
-            <div className="flex lg:hidden items-center justify-start gap-5 w-full">
+            <div className="flex lg:hidden items-center justify-start sm:justify-center gap-5 w-full">
               {scrollSnaps.map((_, index) => (
                 <button
                   key={index}

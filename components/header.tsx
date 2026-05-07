@@ -25,7 +25,7 @@ export function Header({ navLinks, logo }: HeaderProps) {
 
   return (
     <header className="">
-      <nav className="max-w-auto mx-auto px-4 py-2 sm:px-6 sm:py-4 lg:px-8 lg:py-5 mb-18">
+      <nav className="max-w-auto mx-auto px-4 py-2 sm:px-6 sm:py-4 lg:px-8 lg:py-5 mb-18 sm:mb-12 lg:mb-18">
 
         {/* Single row — logo | nav | search + hamburger */}
         <div className="flex items-center justify-between">

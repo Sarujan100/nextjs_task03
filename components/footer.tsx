@@ -39,11 +39,14 @@ export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
         {/* Divider */}
         <div className="border-t border-white mb-8"></div>
 
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-4">
+
+
+
+        {/* Responsive Layout: Original grid for mobile/tablet, Flex for lg+ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-4 lg:gap-6">
 
           {/* Reach us */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 lg:flex-[1.5] min-w-[200px]">
             <h3 className="text-[20px] font-lexend text-white font-semibold leading-normal">{reachUs.title}</h3>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-6">
@@ -64,9 +67,9 @@ export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
           </div>
 
           {/* Grouping Company, Legal, Quick Links for Mobile */}
-          <div className="grid grid-cols-2 gap-5 lg:gap-6 md:contents lg:grid lg:col-span-3 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-5 lg:gap-6 md:contents lg:contents">
             {sections.map((section, idx) => (
-              <div key={idx}>
+              <div key={idx} className="flex-1 min-w-[120px]">
                 <h3 className="text-[20px] font-lexend text-white font-semibold leading-normal mb-6">{section.title}</h3>
                 <ul className="space-y-4">
                   {section.links.map((link, lIdx) => (
@@ -78,11 +81,14 @@ export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
           </div>
 
           {/* Map */}
-          <div className=" overflow-hidden">
-            <img src={mapImage} alt="Map" className="h-full w-full object-cover" />
+          <div className="overflow-hidden lg:flex-[1.5] min-w-[310px] md:col-span-2 lg:col-span-1">
+            <img src={mapImage} alt="Map" className="h-[260px] w-full object-cover sm:w-full sm:h-[260px] md:w-full lg:w-full" />
           </div>
 
         </div>
+
+
+
       </div>
     </footer>
   );

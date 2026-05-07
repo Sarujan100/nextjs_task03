@@ -35,7 +35,7 @@ export function PhilosophySection({ title, description, items, stats }: Philosop
   };
 
   return (
-    <section className="flex pb-18">
+    <section className="flex pb-18 sm:pb-14 lg:pb-18">
       <div className="flex flex-col max-w-7xl mx-auto gap-12">
         {/* Section Title */}
         <div className="flex flex-col text-center gap-2">
@@ -66,9 +66,9 @@ export function PhilosophySection({ title, description, items, stats }: Philosop
         </div>
 
         {/* Stats Row */}
-        <div className="stats-divider grid grid-cols-1 md:grid-cols-4 md:divide-x divide-y md:divide-y-0 divide-gray-200">
+        <div className="stats-divider grid grid-cols-1 sm:grid-cols-4 sm:divide-x divide-y sm:divide-y-0 divide-gray-200">
           {stats.map((stat, i) => (
-            <div key={i} className="text-center py-16">
+            <div key={i} className="text-center py-16 sm:py-12 lg:py-16">
               <p className="text-dark-green-200 text-[16px] leading-[26px] font-lexend font-normal font-normal mb-2">{stat.label}</p>
               <p className="text-light-green-500 text-[24px] leading-[-0.8px] font-lexend font-semibold font-normal">{stat.value}</p>
             </div>

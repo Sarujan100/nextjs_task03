@@ -23,7 +23,7 @@ export function FAQSection({ title, subtitle, description, items }: FAQProps) {
   };
 
   return (
-    <section className="pb-18">
+    <section className="pb-18 sm:pb-14 lg:pb-18">
       <div className="flex flex-col gap-6 md:gap-8 mx-auto">
         {/* Section Title */}
         <div className="text-center">

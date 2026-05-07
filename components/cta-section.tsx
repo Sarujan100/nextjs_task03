@@ -24,7 +24,7 @@ interface CTAProps {
 
 export function CTASection({ title, description, philosophies, banner }: CTAProps) {
   return (
-    <section className="pb-18">
+    <section className="pb-18 sm:pb-14 lg:pb-18">
       <div className="flex flex-col gap-8 mx-auto">
         {/* Section Title */}
         <div className="text-center">
@@ -84,7 +84,7 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 py-16 xl:px-50 items-center relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 py-16 sm:py-10 xl:px-50 items-center relative z-10">
             {/* Left Content */}
             <div className="flex flex-col items-start gap-4">
               <h3 className="text-[30px] text-white font-bold leading-normal tracking-[-0.8px] font-lexend">
@@ -106,7 +106,7 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
             </div>
 
             {/* Right Content (Registration Button) */}
-            <div className="flex justify-center md:justify-end md:pr-12">
+            <div className="flex justify-center md:justify-end">
               <button className="glass-panel px-12 py-4 text-white font-lexend font-semibold text-[16px] hover:bg-white/20 transition cursor-pointer">
                 {banner.buttonText}
               </button>

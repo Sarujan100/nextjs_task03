@@ -14,7 +14,7 @@ interface TrustedCompaniesProps {
 export function TrustedCompaniesSection({ title, items }: TrustedCompaniesProps) {
   return (
     <section className="bg-[#F4F6F6] py-12 mx-[-1rem] sm:mx-[-1.5rem] lg:mx-[-100px]">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 sm:gap-2 lg:gap-6">
         {/* Section Title */}
         <div className="text-center px-4 sm:px-6 lg:px-[100px]">
           <h2 className="text-[20px] leading-normal font-semibold text-dark-blue font-lexend">
