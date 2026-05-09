@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -133,5 +134,3 @@ export function HeroSection({ title, highlight, stats, searchOptions, mainImage 
     </div>
   );
 }
-
-

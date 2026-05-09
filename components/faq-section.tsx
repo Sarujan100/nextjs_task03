@@ -27,14 +27,14 @@ export function FAQSection({ title, subtitle, description, items }: FAQProps) {
       <div className="flex flex-col gap-6 md:gap-8 mx-auto">
         {/* Section Title */}
         <div className="text-center">
-          <h2 className="text-[30px] leading-normal tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
+          <h2 className="text-3xl tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
             {title.split('“questions”')[0]} <span className="text-primary-500">“questions”</span>
           </h2>
         </div>
 
 
         <div className="flex flex-col gap-2">
-          <h2 className="text-[24px] leading-normal self-stretch font-lexend font-medium text-dark-green">{subtitle}</h2 >
+          <h2 className="text-2xl self-stretch font-lexend font-medium text-dark-green">{subtitle}</h2 >
           <p className="faq-question">{description}</p>
         </div>
 
@@ -49,7 +49,7 @@ export function FAQSection({ title, subtitle, description, items }: FAQProps) {
                 onClick={() => toggleAccordion(index)}
                 className="w-full flex items-center justify-between gap-2.5 py-3 md:py-2.5 text-left transition"
               >
-                <h3 className="text-[20px] leading-normal self-stretch font-lexend font-normal text-dark-green">{faq.question}</h3>
+                <h3 className="text-xl self-stretch font-lexend font-normal text-dark-green">{faq.question}</h3>
                 <img
                   src={expandedIndex === index ? "/chevron-up.svg" : "/chevron-down.svg"}
                   alt="Toggle FAQ"
@@ -59,7 +59,7 @@ export function FAQSection({ title, subtitle, description, items }: FAQProps) {
 
               {expandedIndex === index && (
                 <div className="pl-3 md:pl-4 ">
-                  <p className="text-[14px] font-open-sans font-normal text-dark-green leading-normal">{faq.answer}</p>
+                  <p className="text-sm font-open-sans font-normal text-dark-green">{faq.answer}</p>
                 </div>
               )}
             </div>

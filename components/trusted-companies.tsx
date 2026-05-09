@@ -13,18 +13,18 @@ interface TrustedCompaniesProps {
 
 export function TrustedCompaniesSection({ title, items }: TrustedCompaniesProps) {
   return (
-    <section className="bg-[#F4F6F6] py-12 mx-[-1rem] sm:mx-[-1.5rem] lg:mx-[-100px]">
-      <div className="flex flex-col gap-6 sm:gap-2 lg:gap-6">
+    <section className="bg-[#F4F6F6] py-12 mx-[-1rem] sm:mx-[-1.5rem] lg:mx-[-72px] xl:mx-[-100px]">
+      <div className="flex flex-col gap-6 sm:gap-1 lg:gap-6">
         {/* Section Title */}
         <div className="text-center px-4 sm:px-6 lg:px-[100px]">
-          <h2 className="text-[20px] leading-normal font-semibold text-dark-blue font-lexend">
+          <h2 className="text-xl font-semibold text-dark-blue font-lexend">
             {title}
           </h2>
         </div>
 
         {/* Companies Flex (Horizontal Scroll) */}
-        <div className="w-full overflow-x-auto scrollbar-hide py-4">
-          <div className="flex items-center justify-center gap-8 md:gap-14 mx-auto min-w-max px-4">
+        <div className="w-full overflow-x-auto scrollbar-hide">
+          <div className="flex items-center justify-center gap-8 md:gap-14 mx-auto min-w-max px-4 min-h-[80px]">
             {items.map((company) => (
               <div
                 key={company.id}

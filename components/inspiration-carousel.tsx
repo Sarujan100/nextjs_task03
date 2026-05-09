@@ -58,7 +58,7 @@ export function InspirationCarouselSection({ title, description, items }: Inspir
         <div className="flex flex-col lg:flex-row items-center  gap-6">
           {/* Left Content */}
           <div className="w-full lg:w-1/3 flex flex-col items-start sm:text-center sm:items-center lg:items-start lg:sm:text-start">
-            <h2 className="text-[48px] font-bold text-light-green-500 font-lexend leading-[-0.8px] mb-2.5">
+            <h2 className="text-5xl font-bold text-light-green-500 font-lexend mb-2.5">
               {title}
             </h2>
             <p className="text-inspiration-desc mb-8 max-w-md">
@@ -127,10 +127,10 @@ export function InspirationCarouselSection({ title, description, items }: Inspir
                       {index === selectedIndex && (
                         <div className="absolute bottom-6 left-6 flex items-end gap-2.5">
                           <div className="inspiration-card px-4 py-8 shadow-lg max-w-[260px]">
-                            <div className="flex items-center gap-2 text-[16px] leading-[24px] text-[#5E6F6C] font-medium font-poppins mb-2">
+                            <div className="flex items-center gap-2 text-base text-[#5E6F6C] font-medium font-poppins mb-2">
                               <span>{item.description}</span>
                             </div>
-                            <h3 className="text-[24px] leading-normal tracking-[-0.8px] font-semibold text-[#252F40] font-lexend">
+                            <h3 className="text-2xl tracking-[-0.8px] font-semibold text-[#252F40] font-lexend">
                               {item.title}
                             </h3>
                           </div>

@@ -28,10 +28,10 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
       <div className="flex flex-col gap-8 mx-auto">
         {/* Section Title */}
         <div className="text-center">
-          <h2 className="text-[30px] leading-normal tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
+          <h2 className="text-3xl tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
             {title.split('client say')[0]} <span className="text-primary-500">client say</span>
           </h2>
-          <p className="text-[14px] leading-[26px] self-stretch font-lexend font-normal text-light-green-500">
+          <p className="text-sm self-stretch font-lexend font-normal text-light-green-500">
             {description}
           </p>
         </div>
@@ -53,7 +53,7 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
                 ></div>
 
                 {/* Inner White Card */}
-                <div className="relative z-10 bg-white p-6 rounded-[15px] flex flex-col h-full">
+                <div className="relative z-10 bg-white hover:p-6 rounded-[15px] flex flex-col h-full">
                   {/* Number Box */}
                   <div className="gradient-border w-[44px] h-[44px] flex flex-shrink-0 items-center justify-center text-dark-green font-lexend font-semibold text-[20px] transition-all duration-300 group-hover:text-white mb-3.5 relative">
                     {/* Number Box Gradient Background & Border (visible on hover) */}
@@ -64,8 +64,8 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
                     <span className="relative z-10">{index + 1}</span>
                   </div>
 
-                  <h3 className="text-[24px] leading-normal tracking-[-0.8px] self-stretch font-lexend font-semibold text-light-green-500 mb-4">{item.title}</h3>
-                  <p className="text-[#58605F] text-[20px] font-lexend font-normal leading-normal self-stretch">{item.description}</p>
+                  <h3 className="text-2xl tracking-[-0.8px] self-stretch font-lexend font-semibold text-light-green-500 mb-4">{item.title}</h3>
+                  <p className="text-[#58605F] text-xl font-lexend font-normal self-stretch">{item.description}</p>
                 </div>
               </div>
             );
@@ -84,13 +84,13 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 py-16 sm:py-10 xl:px-50 items-center relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 py-16 sm:px-6 sm:py-8 md:px-8 md:py-10 xl:px-50 xl:py-16 items-center relative z-10">
             {/* Left Content */}
             <div className="flex flex-col items-start gap-4">
-              <h3 className="text-[30px] text-white font-bold leading-normal tracking-[-0.8px] font-lexend">
+              <h3 className="text-3xl text-white font-bold tracking-[-0.8px] font-lexend">
                 {banner.title.split(' 😍')[0]} 😍
               </h3>
-              <p className="text-white text-[16px] leading-[26px] font-lexend font-normal">
+              <p className="text-white text-base font-lexend font-normal">
                 {banner.description}
               </p>
 
@@ -101,13 +101,13 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
                     <img key={i} src={avatar} alt="User" className="" />
                   ))}
                 </div>
-                <span className="text-white text-[16px] leading-[26px] font-lexend font-normal">and others</span>
+                <span className="text-white text-base font-lexend font-normal">and others</span>
               </div>
             </div>
 
             {/* Right Content (Registration Button) */}
-            <div className="flex justify-center md:justify-end">
-              <button className="glass-panel px-12 py-4 text-white font-lexend font-semibold text-[16px] hover:bg-white/20 transition cursor-pointer">
+            <div className="flex justify-center sm:justify-end">
+              <button className="glass-panel px-12 py-4 text-white font-lexend font-semibold text-base hover:bg-white/20 transition cursor-pointer">
                 {banner.buttonText}
               </button>
             </div>

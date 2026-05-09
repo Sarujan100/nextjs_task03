@@ -47,19 +47,19 @@ export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
 
           {/* Reach us */}
           <div className="flex flex-col gap-6 lg:flex-[1.5] min-w-[200px]">
-            <h3 className="text-[20px] font-lexend text-white font-semibold leading-normal">{reachUs.title}</h3>
+            <h3 className="text-xl font-lexend text-white font-semibold">{reachUs.title}</h3>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-6">
                 <img src="/call-calling.svg" alt="Phone" className="" />
-                <span className="text-[16px] text-white font-lexend font-normal leading-[26px]">{reachUs.phone}</span>
+                <span className="text-base text-white font-lexend font-normal">{reachUs.phone}</span>
               </div>
               <div className="flex items-center gap-6">
                 <img src="/sms.svg" alt="Email" className="" />
-                <span className="text-[16px] text-white font-lexend font-normal leading-[26px]">{reachUs.email}</span>
+                <span className="text-base text-white font-lexend font-normal">{reachUs.email}</span>
               </div>
               <div className="flex items-center gap-6">
                 <img src="/location-2.svg" alt="Location" className="" />
-                <span className="text-[16px] text-white font-lexend font-normal leading-[26px]">
+                <span className="text-base text-white font-lexend font-normal">
                   {reachUs.address}
                 </span>
               </div>
@@ -70,10 +70,10 @@ export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
           <div className="grid grid-cols-2 gap-5 lg:gap-6 md:contents lg:contents">
             {sections.map((section, idx) => (
               <div key={idx} className="flex-1 min-w-[120px]">
-                <h3 className="text-[20px] font-lexend text-white font-semibold leading-normal mb-6">{section.title}</h3>
+                <h3 className="text-xl font-lexend text-white font-semibold mb-6">{section.title}</h3>
                 <ul className="space-y-4">
                   {section.links.map((link, lIdx) => (
-                    <li key={lIdx}><Link href={link.href} className="text-[16px] text-white font-lexend font-normal leading-[26px]">{link.label}</Link></li>
+                    <li key={lIdx}><Link href={link.href} className="text-base text-white font-lexend font-normal">{link.label}</Link></li>
                   ))}
                 </ul>
               </div>
@@ -93,3 +93,5 @@ export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
     </footer>
   );
 }
+
+

@@ -50,7 +50,7 @@ export function Header({ navLinks, logo }: HeaderProps) {
                   key={link.label}
                   href={link.href}
                   onClick={() => setActiveLink(link.label)}
-                  className={`nav-link transition-colors duration-200 relative px-5 py-2.5 ${activeLink === link.label
+                  className={`font-lexend text-base font-semibold transition-colors duration-200 relative px-5 py-2.5 ${activeLink === link.label
                     ? ''
                     : 'text-gray-600 hover:text-[#C9A84C]'
                     }`}
