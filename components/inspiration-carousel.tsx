@@ -115,7 +115,7 @@ export function InspirationCarouselSection({ title, description, items }: Inspir
                       }`}
                     onClick={() => emblaApi?.scrollTo(index)}
                   >
-                    <div className="relative h-full w-full rounded-[24px] overflow-hidden">
+                    <div className="relative h-full w-full rounded-[14px] overflow-hidden">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -125,8 +125,8 @@ export function InspirationCarouselSection({ title, description, items }: Inspir
 
                       {/* Overlay Card */}
                       {index === selectedIndex && (
-                        <div className="absolute bottom-6 left-6 flex items-end gap-2.5">
-                          <div className="inspiration-card px-4 py-8 shadow-lg max-w-[260px]">
+                        <div className="absolute bottom-6 left-10 sm:absolute sm:bottom-6 sm:left-6 flex items-end justify-center gap-2.5">
+                          <div className="inspiration-card px-4 py-8 shadow-lg sm:max-w-[260px] max-w-[192px]">
                             <div className="flex items-center gap-2 text-base text-[#5E6F6C] font-medium font-poppins mb-2">
                               <span>{item.description}</span>
                             </div>

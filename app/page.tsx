@@ -14,7 +14,7 @@ import content from '@/lib/content.json';
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-[1640px]">
+    <div className="mx-auto max-w-[1690px]">
       <Header
         navLinks={content.header.navLinks}
         logo={content.header.logo}

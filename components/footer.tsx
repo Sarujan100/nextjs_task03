@@ -28,12 +28,12 @@ interface FooterProps {
 
 export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
   return (
-    <footer className="bg-dark-green text-white px-4 py-8 sm:px-8 sm:py-16 xl:px-25 xl:py-16">
+    <footer className="bg-dark-green text-white px-4 py-8 sm:px-8 sm:py-10 xl:px-25 xl:py-16">
       <div className="mx-auto">
 
         {/* Logo Section */}
         <div className="flex justify-center mb-8">
-          <img src={logo} alt="FAAVA Properties" className="h-[48px] object-contain" />
+          <img src={logo} alt="FAAVA Properties" className="h-[72px] w-[200px] object-contain" />
         </div>
 
         {/* Divider */}
@@ -43,7 +43,7 @@ export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
 
 
         {/* Responsive Layout: Original grid for mobile/tablet, Flex for lg+ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-4 sm:gap-10 md:gap-x-18 lg:gap-6">
 
           {/* Reach us */}
           <div className="flex flex-col gap-6 lg:flex-[1.5] min-w-[200px]">
@@ -67,7 +67,7 @@ export function Footer({ logo, reachUs, sections, mapImage }: FooterProps) {
           </div>
 
           {/* Grouping Company, Legal, Quick Links for Mobile */}
-          <div className="grid grid-cols-2 gap-5 lg:gap-6 md:contents lg:contents">
+          <div className="grid grid-cols-2 gap-5 lg:gap-6 sm:grid sm:grid-cols-3 md:contents lg:contents">
             {sections.map((section, idx) => (
               <div key={idx} className="flex-1 min-w-[120px]">
                 <h3 className="text-xl font-lexend text-white font-semibold mb-6">{section.title}</h3>

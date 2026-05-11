@@ -28,7 +28,7 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
       <div className="flex flex-col gap-8 mx-auto">
         {/* Section Title */}
         <div className="text-center">
-          <h2 className="text-3xl tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500">
+          <h2 className="text-3xl tracking-[-0.8px] self-stretch font-lexend font-bold text-light-green-500 mb-2">
             {title.split('client say')[0]} <span className="text-primary-500">client say</span>
           </h2>
           <p className="text-sm self-stretch font-lexend font-normal text-light-green-500">
@@ -106,7 +106,7 @@ export function CTASection({ title, description, philosophies, banner }: CTAProp
             </div>
 
             {/* Right Content (Registration Button) */}
-            <div className="flex justify-center sm:justify-end">
+            <div className="flex justify-start sm:justify-end">
               <button className="glass-panel px-12 py-4 text-white font-lexend font-semibold text-base hover:bg-white/20 transition cursor-pointer">
                 {banner.buttonText}
               </button>
