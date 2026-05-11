@@ -125,8 +125,8 @@ export function InspirationCarouselSection({ title, description, items }: Inspir
 
                       {/* Overlay Card */}
                       {index === selectedIndex && (
-                        <div className="absolute bottom-6 left-10 sm:absolute sm:bottom-6 sm:left-6 flex items-end justify-center gap-2.5">
-                          <div className="inspiration-card px-4 py-8 shadow-lg sm:max-w-[260px] max-w-[192px]">
+                        <div className="absolute bottom-6 left-6 sm:absolute sm:bottom-6 sm:left-6 flex items-end justify-center gap-2.5">
+                          <div className="inspiration-card px-4 py-8 shadow-lg sm:max-w-[260px] max-w-[220px]">
                             <div className="flex items-center gap-2 text-base text-[#5E6F6C] font-medium font-poppins mb-2">
                               <span>{item.description}</span>
                             </div>
